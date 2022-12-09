@@ -15,7 +15,7 @@ function onSubmit(e) {
   generateImageRequest(prompt, size, number);
 }
 
-async function generateImageRequest(prompt, size, number) {
+async function generateImageRequest(prompt, size = 'medium', number = '5') {
   try {
     showSpinner();
     const response = await fetch('/openai/generateimage', {
@@ -53,7 +53,8 @@ async function generateImageRequest(prompt, size, number) {
   } catch (error) {
     const h2 = document.createElement('h2');
     h2.classList.add('msg');
-    h2.textContent = error;
+    h2.innerText = error;
+    imageContainer.appendChild(h2);
     // document.querySelector('.msg').textContent = error;
   }
 }

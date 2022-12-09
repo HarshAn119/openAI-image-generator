@@ -5,9 +5,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/spinner.css" />
-
+    <link rel="stylesheet" href="css/style.css" />
+    
     <script src="js/main.js" defer></script>
     <title>OpenAI Image Genrator</title>
 </head>
@@ -31,9 +31,9 @@
     <main>
         <section class="showcase">
             <form id="image-form">
-                <h1>Describe An Image</h1>
+                <h1 class="heading">Describe An Image</h1>
                 <div class="form-control">
-                    <input type="text" id="prompt" placeholder="Enter Text" />
+                    <input type="text" id="prompt" placeholder="Enter Text" autocomplete="off" />
                 </div>
                 <!-- size and number of images-->
                 <div class="form-control image-form__details">
@@ -42,7 +42,7 @@
                         <option value="medium" selected>Medium</option>
                         <option value="large">Large</option>
                     </select>
-                    <select name="size" id="size">
+                    <select name="number" id="number">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -62,10 +62,10 @@
         <section class="image">
             <div class="image-container">
                 <h2 class="msg"></h2>
-                <img src="" alt="" id="image" />
             </div>
         </section>
     </main>
+    <div class="spinner"></div>
 </body>
 
 </html>

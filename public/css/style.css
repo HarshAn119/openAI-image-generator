@@ -99,10 +99,10 @@ form button:hover {
 }
 
 .image-form__details {
-    display: flex;
-    width: 20rem;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  width: 20rem;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Image */
@@ -114,11 +114,74 @@ form button:hover {
 
 img {
   display: block;
-  margin: auto;
+  margin: 1rem;
 }
 
 .msg {
   font-size: 1.6rem;
   text-align: center;
   margin-top: 1rem;
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#size {
+  margin-right: 1rem;
+}
+
+@media (max-width: 510px) {
+  .logo {
+    font-size: 0.8rem;
+  }
+  .heading {
+    font-size: 1.8rem !important;
+  }
+
+  #prompt {
+    width: 300px;
+  }
+  #size {
+    width: 200px;
+    margin-right: 5px;
+  }
+  #number {
+    width: 120px;
+  }
+  img {
+    width: 400px;
+    height: 400px;
+  }
+}
+@media (max-width: 380px) {
+  .logo {
+    font-size: 0.6rem;
+  }
+  .heading {
+    font-size: 1rem !important;
+  }
+
+  .image-form__details {
+    display: flex;
+    justify-content: center;
+  }
+
+  #prompt {
+    width: 250px;
+  }
+  #size {
+    width: 180px;
+    margin-right: 3px;
+  }
+  #number {
+    width: 100px;
+  }
+  img {
+    width: 200px;
+    height: 200px;
+  }
 }

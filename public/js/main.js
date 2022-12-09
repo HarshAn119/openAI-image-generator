@@ -16,6 +16,7 @@ function onSubmit(e) {
 }
 
 async function generateImageRequest(prompt, size = 'medium', number = '5') {
+  const imageContainer = document.querySelector('.image-container');
   try {
     showSpinner();
     const response = await fetch('/openai/generateimage', {
@@ -41,7 +42,6 @@ async function generateImageRequest(prompt, size = 'medium', number = '5') {
     const imageUrls = data.data;
     // document.querySelector('#image').src = imageUrl;
 
-    const imageContainer = document.querySelector('.image-container');
     imageUrls.map((imageUrl) => {
       const image = document.createElement('img');
       image.setAttribute('id', 'image');
